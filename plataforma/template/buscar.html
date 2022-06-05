@@ -1,0 +1,16 @@
+{%extends "inicio.html"%}
+
+{% load static %}
+
+{%block contenido%}
+    
+    <h3> Busqueda de Proveedores por Rama</h3>
+    <form action="buscar" method="POST">
+        {% csrf_token s%}
+        <p>Rama</p>
+        <input type="text" name="rama" id="rama">
+        <input type="submit" value="Buscar">
+
+    </form>
+
+{% endblock%}

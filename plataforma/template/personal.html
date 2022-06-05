@@ -1,0 +1,30 @@
+{%extends "inicio.html"%}
+
+{% load static %}
+
+{%block contenido%}
+
+ <h2> Personal </h2>
+ <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Sector</th>
+        <th scope="col">Rol</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for n in personal %}
+      <tr>
+        <th scope="row">{{n.id}}</th>
+        <td>{{n.nombreU}}</td>
+        <td>{{n.sector}}</td>
+        <td>{{n.rol}}</td>
+        
+      </tr>
+        {%endfor%}
+    </tbody>
+  </table>
+
+{% endblock%}

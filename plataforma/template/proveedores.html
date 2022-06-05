@@ -1,0 +1,30 @@
+{%extends "inicio.html"%}
+
+{% load static %}
+
+{%block contenido%}
+
+<h2> Proveedores </h2>
+<table class="table">
+   <thead>
+     <tr>
+       <th scope="col">ID</th>
+       <th scope="col">Nombre</th>
+       <th scope="col">Codigo Prov.</th>
+       <th scope="col">Tipo Prov.</th>
+       <th scope="col">Rama</th>
+     </tr>
+   </thead>
+   <tbody>
+       {% for n in proveedor %}
+     <tr>
+       <th scope="row">{{n.id}}</th>
+       <td>{{n.nombreP}}</td>
+       <td>{{n.codigoprov}}</td>
+       <td>{{n.tipo_prov}}</td>
+       <td>{{n.rama}}</td>
+        {% endfor %}
+      </tbody>
+    </table>
+
+{% endblock %}

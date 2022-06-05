@@ -1,0 +1,24 @@
+{%extends "inicio.html"%}
+
+{% load static %}
+
+{%block contenido%}
+
+    <h2> Alta de proveedor</h2>
+
+    <form action ="form_proveedor" method="post">
+        {% csrf_token s%}
+        <p>Nombre: </p>
+        <input type ="text" name ="nombreP" required>
+        <p>N° Proveedor: </p>
+        <input type="text" name="codigoprov" required>
+        <p>Tipo de Proveedor: </p>
+        <input type="text" name="tipo_prov" required>
+        <p>Rama: </p>
+        <input type="text" name="rama" required>
+
+        <input type ="submit" value ="enviar">
+
+    </form>
+
+{% endblock%}
